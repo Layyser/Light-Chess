@@ -6,7 +6,7 @@
 /*--board-light: #F3DFB9;
 --board-dark: #8A5434; */
 
-html {
+html * {
     touch-action: manipulation;
 }
 
