@@ -1,0 +1,149 @@
+[piece="white-bishop"] {
+    background-image: url('../assets/pieces/wbishop.svg');
+}
+
+[piece="white-king"] {
+    background-image: url('../assets/pieces/wking.svg');
+}
+
+[piece="white-knight"] {
+    background-image: url('../assets/pieces/wknight.svg');
+}
+
+[piece="white-pawn"] {
+    background-image: url('../assets/pieces/wpawn.svg');
+}
+
+[piece="white-queen"] {
+    background-image: url('../assets/pieces/wqueen.svg');
+}
+
+[piece="white-rook"] {
+    background-image: url('../assets/pieces/wrook.svg');
+}
+
+
+
+[piece="black-bishop"] {
+    background-image: url('../assets/pieces/bbishop.svg');
+}
+
+[piece="black-king"] {
+    background-image: url('../assets/pieces/bking.svg');
+}
+
+[piece="black-knight"] {
+    background-image: url('../assets/pieces/bknight.svg');
+}
+
+[piece="black-pawn"] {
+    background-image: url('../assets/pieces/bpawn.svg');
+}
+
+[piece="black-queen"] {
+    background-image: url('../assets/pieces/bqueen.svg');
+}
+
+[piece="black-rook"] {
+    background-image: url('../assets/pieces/brook.svg');
+}
+
+/*Capture*/
+
+[piece="white-bishop"].to-capture {
+    background-image: radial-gradient(circle farthest-corner at center center, var(--transparent) 54%, var(--black-shadow) 56%, var(--black-shadow) 69%, var(--transparent) 71%), url('../assets/pieces/wbishop.svg');
+}
+
+[piece="white-king"].to-capture {
+    background-image: radial-gradient(circle farthest-corner at center center, var(--transparent) 54%, var(--black-shadow) 56%, var(--black-shadow) 69%, var(--transparent) 71%), url('../assets/pieces/wking.svg');
+}
+
+[piece="white-knight"].to-capture {
+    background-image: radial-gradient(circle farthest-corner at center center, var(--transparent) 54%, var(--black-shadow) 56%, var(--black-shadow) 69%, var(--transparent) 71%), url('../assets/pieces/wknight.svg');
+}
+
+[piece="white-pawn"].to-capture {
+    background-image: radial-gradient(circle farthest-corner at center center, var(--transparent) 54%, var(--black-shadow) 56%, var(--black-shadow) 69%, var(--transparent) 71%), url('../assets/pieces/wpawn.svg');
+}
+
+[piece="white-queen"].to-capture {
+    background-image: radial-gradient(circle farthest-corner at center center, var(--transparent) 54%, var(--black-shadow) 56%, var(--black-shadow) 69%, var(--transparent) 71%), url('../assets/pieces/wqueen.svg');
+}
+
+[piece="white-rook"].to-capture {
+    background-image: radial-gradient(circle farthest-corner at center center, var(--transparent) 54%, var(--black-shadow) 56%, var(--black-shadow) 69%, var(--transparent) 71%), url('../assets/pieces/wrook.svg');
+}
+
+
+[piece="black-bishop"].to-capture {
+    background-image: radial-gradient(circle farthest-corner at center center, var(--transparent) 54%, var(--black-shadow) 56%, var(--black-shadow) 69%, var(--transparent) 71%), url('../assets/pieces/bbishop.svg');
+}
+
+[piece="black-king"].to-capture {
+    background-image: radial-gradient(circle farthest-corner at center center, var(--transparent) 54%, var(--black-shadow) 56%, var(--black-shadow) 69%, var(--transparent) 71%), url('../assets/pieces/bking.svg');
+}
+
+[piece="black-knight"].to-capture {
+    background-image: radial-gradient(circle farthest-corner at center center, var(--transparent) 54%, var(--black-shadow) 56%, var(--black-shadow) 69%, var(--transparent) 71%), url('../assets/pieces/bknight.svg');
+}
+
+[piece="black-pawn"].to-capture {
+    background-image: radial-gradient(circle farthest-corner at center center, var(--transparent) 54%, var(--black-shadow) 56%, var(--black-shadow) 69%, var(--transparent) 71%), url('../assets/pieces/bpawn.svg');
+}
+
+[piece="black-queen"].to-capture {
+    background-image: radial-gradient(circle farthest-corner at center center, var(--transparent) 54%, var(--black-shadow) 56%, var(--black-shadow) 69%, var(--transparent) 71%), url('../assets/pieces/bqueen.svg');
+}
+
+[piece="black-rook"].to-capture {
+    background-image: radial-gradient(circle farthest-corner at center center, var(--transparent) 54%, var(--black-shadow) 56%, var(--black-shadow) 69%, var(--transparent) 71%), url('../assets/pieces/brook.svg');
+}
+
+
+[data-color="white"] {
+    width: 25%;
+    height: 100%;
+    background-size: cover;
+    border: 0px;
+    background-color: transparent;
+}
+
+[data-color="black"] {
+    width: 25%;
+    height: 100%;
+    background-size: cover;
+    border: 0px;
+    background-color: transparent;
+}
+
+[button-id="0"][data-color="white"] {
+    background-image: url('../assets/pieces/wbishop.svg');
+}
+
+[button-id="1"][data-color="white"] {
+    background-image: url('../assets/pieces/wknight.svg');
+}
+
+[button-id="2"][data-color="white"] {
+    background-image: url('../assets/pieces/wqueen.svg');
+}
+
+[button-id="3"][data-color="white"] {
+    background-image: url('../assets/pieces/wrook.svg');
+}
+
+[button-id="0"][data-color="black"] {
+    background-image: url('../assets/pieces/bbishop.svg');
+}
+
+[button-id="1"][data-color="black"] {
+    background-image: url('../assets/pieces/bknight.svg');
+}
+
+[button-id="2"][data-color="black"] {
+    background-image: url('../assets/pieces/bqueen.svg');
+}
+
+[button-id="3"][data-color="black"] {
+    background-image: url('../assets/pieces/brook.svg');
+}

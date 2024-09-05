@@ -1,0 +1,564 @@
+/*REVISAR LANDSCAPE*/
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+
+
+/*--board-light: #F3DFB9;
+--board-dark: #8A5434; */
+
+
+[data-theme="dark"] {
+    --black-shadow: #00000066;
+    --white: #ffffff;
+    --black: #000000;
+    --transparent: #ffffff00;
+    --disabled-button: gray;
+    --background-dark-gray: #2f2f2f;
+    --background-almost-black: #212121;
+    --negative-background-dark-gray: #e6e6e6;
+    --active-button: #171717;
+    --box-shadow: rgba(5, 5, 5, 0.2);
+    --overlay-div: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] {
+    --black-shadow: #00000068;
+    --white: #000000;
+    --black: #ffffff;
+    --transparent: #ffffff00;
+    --disabled-button: #D3D3D3;
+    --background-dark-gray: #dfdfdf;
+    --background-almost-black: #f7f7f7;
+    --negative-background-dark-gray: #2f2f2f;
+    --active-button: #f0f0f0;
+    --box-shadow: rgba(149, 157, 165, 0.2);
+    --overlay-div: #e6e6e6;
+}
+
+html * {
+    font-family: 'SF Pro Display', sans-serif !important;
+}
+
+#theme-icon1 {
+    transition: transform 0.4s ease;
+    position: relative;
+    z-index: 99;
+    top: 2px;
+    left: 4px;
+}
+
+#theme-icon2 {
+    transition: all 0.4s ease;
+    position: relative;
+    left: 1px;
+    top: 2px;
+    z-index: 99;
+}
+
+path { 
+    transition: fill .3s ease;
+}
+
+body {
+    font-family: arial;
+    margin: 0;
+    padding: none;
+    background-color: var(--background-almost-black);
+    transition: background-color 0.2s linear;
+
+    /*min-width: 350px;*/
+    overflow-x: auto;
+}
+
+
+.header {
+    background-color: var(--background-dark-gray);
+    color: var(--white);
+    transition-property: color, background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    box-shadow: var(--box-shadow) 0px 8px 24px;
+}
+
+.title {
+    height: 100%;
+    display: flex;
+}
+
+
+.header h1 {
+    margin: 0;
+    align-content: center;
+    margin-left: 15px;
+}
+
+.logo {
+    height: 100%;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+    height: 100%;
+}
+
+
+.overlay-div {
+    position: relative;
+    background-color: var(--overlay-div);
+    width: 35vw !important; /* 70/8*4 */
+    height: 8.75vw !important; /* 70/8*1 */
+    max-width: 35vh !important; /* 70/8*4 */
+    max-height: 8.75vh !important; /* 70/8*1 */
+    z-index: 1000;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow) 0px 8px 24px;
+}
+
+.chessboard {
+    background-image: url('../assets/chessboardlabeled.svg');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    background-size: cover;
+    z-index: 50;
+}
+
+.dragging-piece {
+    position: relative;
+    height: 12.5%;
+    width: 12.5%;
+    z-index: 1000;
+}
+
+.glow {
+    position: relative;
+    height: 12.5%;
+    width: 12.5%;
+    z-index: 50;
+}
+
+
+.right-body {
+    width: 25vw;
+    margin-left: 10px;
+    background-color: var(--background-dark-gray);
+    height: 100%;
+    transition: background-color 0.2s linear;
+}
+
+.github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 15px;
+    background-color: var(--black);
+    outline: 2px var(--black) solid;
+    outline-offset: -2px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.github .github-text {
+    color: var(--negative-background-dark-gray);
+    font-weight: 700;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+.github svg path {
+    transition: 400ms;
+    fill: var(--negative-background-dark-gray);
+}
+
+.github:hover {
+    background-color: transparent;
+    outline: 2px var(--negative-background-dark-gray) solid;
+}
+
+.github:hover .github-text {
+    color: var(--negative-background-dark-gray);
+}
+
+.github:hover svg path {
+    fill: var(--negative-background-dark-gray);
+}
+
+@media only screen and (min-width: 1021px) {
+    .chessboard {
+        border-radius: 10px;
+        width: 70vw; /* 50% of the viewport width */
+        height: 70vw; /* Maintain a square shape by using the same value as width */
+        max-width: 70vh; /* Ensure the square doesn’t exceed 50% of viewport height */
+        max-height: 70vh; /* Maintain a square shape by using the same value as max-width */
+    }
+
+    .body {
+        display: flex;
+        flex-direction: row; /* Arrange items in a row */
+        justify-content: center; /* Center the div horizontally */
+        align-items: flex-start; /* Align items at the start (top) of the container */
+        height: 70vw; /* Maintain a square shape by using the same value as width */
+        padding-top: calc(15vh - 70px);
+        padding-bottom: 15vh;
+        max-height: 70vh; /* Maintain a square shape by using the same value as max-width */
+        margin: 0;
+    }
+
+    .right-body {
+        border-radius: 10px;
+        max-width: 25vh;
+    }
+
+    .styled-table {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 1020px) and (orientation: portrait) {
+    .chessboard {
+        margin-top: 0px;
+        border-radius: 0px;
+        width: 100vw; /* 50% of the viewport width */
+        height: 100vw; /* Maintain a square shape by using the same value as width */
+        max-width: calc(100vh - 15px); /* Ensure the square doesn’t exceed 50% of viewport height */
+        max-height: calc(100vh - 15px); /* Maintain a square shape by using the same value as max-width */
+    }
+
+    .body {
+        display: flex;
+        flex-direction: column; /* Arrange items in a column */
+        justify-content: center; /* Center the div horizontally */
+        align-items: center; /* Align items at the center */
+        height: auto; /* Adjust height to content */
+        padding: 0;
+        margin: 0;
+    }
+
+    .right-body {
+        border-radius: 0px;
+        width: 100vw;
+        max-width: 100vh;
+        margin-left: 0;
+        margin-top: 0;
+        height: calc(100vh - 100vw - 70px);
+    }
+
+    
+    .styled-table {
+        font-size: 1em;
+    }
+
+    
+    h1 {
+        font-size: 1.5em;
+        margin-left: 10px !important;
+    }
+
+    .logo {
+        height: 40px;
+        padding-top: 5px;
+    }
+
+    .github{
+        display: flex;
+        align-items: center;
+        padding: 5px 6px 5px 12px;
+        background-color: var(--black);
+        outline: 2px var(--black) solid;
+        outline-offset: -2px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 99px;
+        gap: 2px;
+    }
+}
+
+
+@media (max-width: 1020px) and (orientation: landscape) {
+    .chessboard {
+        border-radius: 0px;
+        width: 100vw;
+        height: 100%;
+        max-width: calc(100vh - 70px);
+    }
+
+    .body {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        height: 100vw;
+        max-height: calc(100vh - 69px);
+    }
+
+    .right-body {
+        width: 100vw;
+        height: 100%;
+        max-width: calc(100vh - 69px);
+        margin-left: 10px;
+        margin-top: 0;
+    }
+
+    .styled-table {
+        font-size: 1.4em;
+    }
+}
+
+
+.square {
+    background-repeat: no-repeat;
+    background-size: cover; /* Resize the background image to cover the entire container */
+    width: 12.5%;
+    height: 12.5%;
+    display: inline-block;
+    box-sizing: border-box;
+    /*poner overlay semitransparente cuando el raton está encima*/
+}
+
+.dragging {
+    transform: translate(0px, 0px);  
+    /*poner overlay transparente completo, important*/
+}
+
+.square {
+    z-index: 100;
+}
+
+.selected {
+    background-color: black;
+    opacity: 40%;
+    z-index: 51;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+
+.to-move {
+    background: radial-gradient(circle farthest-corner at center center, var(--black-shadow) 17%, var(--transparent) 19%);
+}
+
+
+.margin {
+    width: 15vw; /* 50% of the viewport width */
+    max-width: 15vh; /* Ensure the square doesn’t exceed 50% of viewport height */
+}
+
+
+#output {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-left: 0px;
+    border-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: block;
+    background-color: black;
+    color: white;
+    font-family: 'Lucida Console', Monaco, monospace;
+    outline: none;
+}
+
+.controls {
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    height: 60px;
+}
+
+.space {
+    height: calc(100% - 72px);
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 12px;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+.arrow-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--background-almost-black);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+    width: calc(50% - 18px);
+    margin-bottom: 12px;
+    margin-left: 12px;
+}
+
+.arrow-button:disabled {
+    opacity: 50%;
+    cursor: default;
+}
+
+.arrow-button:not(:disabled):hover {
+    background-color: var(--active-button);
+}
+
+.arrow-button:not(:disabled):active {
+    background-color: var(--black);
+}
+
+.arrow-icon {
+    fill: var(--white);
+    transition: fill 0.2s linear;
+}
+
+
+
+
+.styled-table {
+    border-collapse: collapse;
+    font-family: sans-serif;
+    width: 100%;
+    max-width: 100%;
+}
+
+.styled-table thead tr {
+    transition: color 0.2s linear;
+    color: var(--white);
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    color: var(--white);
+    transition: color 0.2s linear;
+}
+
+
+.styled-table thead tr th:first-child {
+    width: 20%;
+}
+
+.styled-table tbody th td:first-child {
+    width: 20%;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+    transition: background-color 0.2s linear;
+    background-color: var(--background-almost-black);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.switch input {
+    display: none;
+}
+
+.switch {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    margin:auto;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 30px;
+    box-shadow: 0 0 0 2px var(--negative-background-dark-gray), 0 0 4px var(--negative-background-dark-gray);
+    cursor: pointer;
+    border: 4px solid transparent;
+    overflow: hidden;
+    transition: 0.2s;
+    z-index: 100;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--negative-background-dark-gray);
+    border-radius: 30px;
+    transform: translateX(-30px);
+    /*translateX(-(w-h))*/
+    transition: 0.2s;
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+    /*translateX(w-h)*/
+    background-color: var(--negative-background-dark-gray);
+}
+
+/*
+input:checked + .slider {
+    box-shadow: 0 0 0 2px var(--white), 0 0 8px var(--white);
+}
+*/
+
+.switch200 .slider:before {
+    width: 200%;
+    transform: translateX(-82px);
+    /*translateX(-(w-h))*/
+}
+
+.switch200 input:checked + .slider:before {
+    background-color: red;
+}
+
+.switch200 input:checked + .slider {
+    box-shadow: 0 0 0 2px red, 0 0 8px red;
+}
+
+
+
+
+.space::-webkit-scrollbar {
+    width: 12px;
+}
+
+/*
+.space::-webkit-scrollbar-track {
+
+}
+*/
+
+.space::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 20px;
+}
