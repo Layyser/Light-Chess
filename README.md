@@ -17,7 +17,7 @@ To compile and run the project locally, follow these steps:
 
 1. **Install Emscripten**: Ensure you have the Emscripten SDK installed. You can follow the instructions [here](https://emscripten.org/docs/getting_started/downloads.html).
    
-2. **Compile the Code**: Run the following command to compile or directly use `chess.js` and `chess.wasm` the C++ code into WebAssembly:
+2. **Compile the Code**: Run the following command to compile the C++ code into WebAssembly or directly use `chess.js` and `chess.wasm`:
    ```bash
    make
 3. **Run Locally**: Open the generated chess.html file in any modern web browser to play the game locally.
