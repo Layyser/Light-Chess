@@ -6,6 +6,10 @@
 /*--board-light: #F3DFB9;
 --board-dark: #8A5434; */
 
+html {
+    touch-action: manipulation;
+}
+
 
 [data-theme="dark"] {
     --black-shadow: #00000066;

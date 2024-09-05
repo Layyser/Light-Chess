@@ -97,7 +97,7 @@ startGameBtn.addEventListener('click', () => {
     localStorage.setItem("disableStockfish", stockfishInput.checked);
 
     playerColor = (localStorage.getItem("useBlack") == 'false') ? 'white' : 'black';
-    if (playerColor == 'black') chessboard.style.backgroundImage = "url(../src/assets/chessboardlabeled-reverse.svg)"
+    if (playerColor == 'black') chessboard.style.backgroundImage = "url(src/assets/chessboardlabeled-reverse.svg)"
     else chessboard.style.backgroundImage = "url(src/assets/chessboardlabeled.svg)"
     initializeChessboard(); // In case the board needs to be flipped
 
@@ -120,7 +120,7 @@ startGameBtn.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', function() {
     // Set player data
     playerColor = (localStorage.getItem("useBlack") == 'false') ? 'white' : 'black';
-    if (playerColor == 'black') chessboard.style.backgroundImage = "url(../src/assets/chessboardlabeled-reverse.svg)"
+    if (playerColor == 'black') chessboard.style.backgroundImage = "url(src/assets/chessboardlabeled-reverse.svg)"
     else chessboard.style.backgroundImage = "url(src/assets/chessboardlabeled.svg)"
 
     // Set stockfish data
