@@ -24,7 +24,7 @@ stockfish.postMessage('ucinewgame');
 
 
 const chessboard = document.querySelector('.chessboard');
-const movePieceAudio = new Audio('../src/assets/pieces/movepiece.mp3');
+const movePieceAudio = new Audio('src/assets/pieces/movepiece.mp3');
 
 const colors = ['black', 'white', 'none'];
 const kinds = ['empty', 'promote', 'bishop', 'king', 'knight', 'pawn', 'queen', 'rook'];

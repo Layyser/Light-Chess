@@ -98,7 +98,7 @@ startGameBtn.addEventListener('click', () => {
 
     playerColor = (localStorage.getItem("useBlack") == 'false') ? 'white' : 'black';
     if (playerColor == 'black') chessboard.style.backgroundImage = "url(../src/assets/chessboardlabeled-reverse.svg)"
-    else chessboard.style.backgroundImage = "url(../src/assets/chessboardlabeled.svg)"
+    else chessboard.style.backgroundImage = "url(src/assets/chessboardlabeled.svg)"
     initializeChessboard(); // In case the board needs to be flipped
 
     // Set stockfish properties
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set player data
     playerColor = (localStorage.getItem("useBlack") == 'false') ? 'white' : 'black';
     if (playerColor == 'black') chessboard.style.backgroundImage = "url(../src/assets/chessboardlabeled-reverse.svg)"
-    else chessboard.style.backgroundImage = "url(../src/assets/chessboardlabeled.svg)"
+    else chessboard.style.backgroundImage = "url(src/assets/chessboardlabeled.svg)"
 
     // Set stockfish data
     elo = localStorage.getItem("elo");
