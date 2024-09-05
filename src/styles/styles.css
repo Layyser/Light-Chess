@@ -6,10 +6,6 @@
 /*--board-light: #F3DFB9;
 --board-dark: #8A5434; */
 
-html * {
-    touch-action: manipulation;
-}
-
 
 [data-theme="dark"] {
     --black-shadow: #00000066;
@@ -40,6 +36,7 @@ html * {
 }
 
 html * {
+    touch-action: manipulation;
     font-family: 'SF Pro Display', sans-serif !important;
 }
 
