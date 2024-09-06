@@ -145,6 +145,8 @@ function promote(id) {
     tableDelete();
     const tableCol = (turn === 'black') ? 0 : 1;
     tableInsert(tableCol, promotedString);
+
+    askStockfish();
 }
 
 
