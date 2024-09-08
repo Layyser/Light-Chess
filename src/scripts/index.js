@@ -338,6 +338,7 @@ function askMovs(row, col) {
 
 function askStockfish() {
     // Wait for a response and then send more commands
+    buttonBackward.disabled = true;
     setTimeout(function() {
         // Set the position on the board (e.g., starting position)
         let message = 'position startpos moves';
@@ -349,4 +350,5 @@ function askStockfish() {
         // Ask Stockfish to calculate the best move (for a given depth)
         stockfish.postMessage('go depth 10');
     }, 1000);
+    buttonBackward.enabled = true;
 }
