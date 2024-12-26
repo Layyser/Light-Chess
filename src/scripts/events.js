@@ -1,4 +1,4 @@
-// -- Handles the logic of the piece dragging and piece clicking events, check chessboard.js --
+// -- Handles the logic of the piece dragging and piece clicking events, check index.js --
 
 
 let draggingPiece = null;

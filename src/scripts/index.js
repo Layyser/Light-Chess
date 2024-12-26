@@ -1,6 +1,3 @@
-// TODO:  add sound when check, (add button to swap the board side, and button to reset the board)?
-
-
 // -- Handles the logic of the chessboard and stockfish --
 
 var wasmSupported = typeof WebAssembly === 'object' && WebAssembly.validate(Uint8Array.of(0x0, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00));
