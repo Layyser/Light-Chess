@@ -143,7 +143,9 @@ function promote(id) {
     const tableCol = (turn === 'black') ? 0 : 1;
     tableInsert(tableCol, promotedString);
 
-    askStockfish();
+    if (turn == stockfishColor && stockfishEnabled) {
+        askStockfish();
+    }
 }
 
 
