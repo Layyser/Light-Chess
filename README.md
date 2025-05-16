@@ -20,8 +20,9 @@ To compile and run the project locally, follow these steps:
 2. **Compile the Code**: Run the following command to compile the C++ code into WebAssembly or directly use `chess.js` and `chess.wasm`:
    ```bash
    make
-3. **Run Locally**: Open the generated chess.html file in any modern web browser to play the game locally.
-
+3. **Run Locally**: Run a server in http://localhost:8000 for example with:
+   ```bash
+   python -m http.server 8000
 ## Documentation
 This project utilizes a combination of open-source tools and assets. Below are links to the key components and resources used:
 - [Emscripten documentation](https://emscripten.org) — Documentation for compiling C++ into WebAssembly.
