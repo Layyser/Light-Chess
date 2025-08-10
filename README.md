@@ -20,7 +20,7 @@ To compile and run the project locally, follow these steps:
 2. **Compile the Code**: Run the following command to compile the C++ code into WebAssembly or directly use `chess.js` and `chess.wasm`:
    ```bash
    make
-3. **Run Locally**: Run a server in http://localhost:8000 for example with:
+3. **Run Locally**: Run a static server in http://localhost:8000 for example with:
    ```bash
    python -m http.server 8000
 ## Documentation

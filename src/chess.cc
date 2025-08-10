@@ -437,7 +437,7 @@ vector<Move> knightMoves(Position pos, Color movingColor) {
 vector<Move> pawnMoves(Position pos, Color movingColor) {
     vector<Move> possibleMoves;
     int direction = (movingColor == WHITE) ? -1 : 1;
-    int lastRow = (movingColor == WHITE) ? 0 : 8;
+    int lastRow = (movingColor == WHITE) ? 0 : 7;
     PieceKind promotionPiece = EMPTY;
 
     // 1. Single square move
